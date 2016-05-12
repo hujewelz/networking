@@ -7,17 +7,18 @@
 //
 
 #import "HUBaseAPIManager.h"
-#import "HUNetworkingApi.h"
 #import "HUProtocol.h"
 #import "HUApiProxy.h"
+#import "HUAppContext.h"
 
-#define CallAPI(REQUEST_METHOD, PARAM) \
+#define CallAPI(REQUEST_METHOD, REQUEST_ID) \
 { \
-    [[HUApiProxy sharedInstance] call##REQUEST_METHOD##WithParams:PARAM apiName:self.child.apiName success:^(id responseObj, NSError *error) { \
+    REQUEST_ID = [[HUApiProxy sharedInstance] call##REQUEST_METHOD##WithParams:apiparam apiName:self.child.apiName success:^(id responseObj, NSError *error) { \
         [self succeedOnCallAPIWithData:responseObj]; \
     } failure:^(id responseObj, NSError *error) { \
         [self failedOnCallAPIWithError: error];\
     }]; \
+    [self.requestIdList addObject:@(REQUEST_ID)]; \
 \
 } \
 
@@ -46,33 +47,30 @@ static NSString * const kAPIManagerErrorDomain = @"APIManagerErrorDomain";
 
 #pragma mark - API
 
-- (void)fetchData {
+- (NSInteger)fetchData {
     
     NSDictionary *data = [self.dataSource paramForApi:self];
-    [self fetchDataWithParam:data];
+    NSInteger requestId = [self fetchDataWithParam:data];
+    return requestId;
 }
 
-- (void)fetchDataWithParam:(NSDictionary *)param {
-   // _url = self.child.apiName;
+- (NSInteger)fetchDataWithParam:(NSDictionary *)param {
+    NSInteger requestId = 0;
     NSDictionary *apiparam = [self reformParams:param];
 
     if ([self shouldCallAPIWithParams:apiparam]) {
         switch (self.child.requestType) {
             case APIManagerRequestTypeGET:
-                CallAPI(GET, apiparam);
+                CallAPI(GET, requestId);
                 break;
             case APIManagerRequestTypePOST:
-                CallAPI(POST, apiparam);
+                CallAPI(POST, requestId);
             default:
                 break;
         }
     }
-    [[HUApiProxy sharedInstance] callGETWithParams:nil apiName:self.child.apiName success:^(id responseObj, NSError *error) {
-        
-    } failure:^(id responseObj, NSError *error) {
-        
-    }];
     
+    return requestId;
 }
 
 //如果需要在调用API之前额外添加一些参数，比如pageNumber和pageSize之类的就在这里添加
@@ -167,11 +165,6 @@ static NSString * const kAPIManagerErrorDomain = @"APIManagerErrorDomain";
     return _origionData;
 }
 
-- (void)cancelRequest {
-    [HUNetworkingApi cancel];
-    
-}
-
 #pragma mark - private
 
 - (void)succeedOnCallAPIWithData:(NSDictionary *)data {
@@ -194,7 +187,7 @@ static NSString * const kAPIManagerErrorDomain = @"APIManagerErrorDomain";
 }
 
 - (BOOL)isRechable {
-    BOOL isNetWorkReachable = [HUNetworkingApi sharedNetworking].isNetWorkReachable;
+    BOOL isNetWorkReachable = [HUAppContext sharedInstance].isReachable;
     if (!isNetWorkReachable) {
         _errorType = HUAPIManagerErrorTypeNoNetWork;
         NSError *error = [NSError errorWithDomain:kAPIManagerErrorDomain code:_errorType userInfo:[self errorUserInfo]];

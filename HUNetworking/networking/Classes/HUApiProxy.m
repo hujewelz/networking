@@ -37,13 +37,13 @@
 - (NSUInteger)callGETWithParams:(NSDictionary *)params apiName:(NSString *)apiName success:(HUCallback)success failure:(HUCallback)failure {
     NSURLRequest *request = [[HUApiURLRequestGenerator sharedInstance] generateGETRequestWithParamas:params apiMethodName:apiName];
     NSNumber *requestID = [self callRequestWithRequest:request success:success failure:failure];
-    return requestID.unsignedIntegerValue;
+    return requestID.integerValue;
 }
 
 - (NSUInteger)callPOSTWithParams:(NSDictionary *)params apiName:(NSString *)apiName success:(HUCallback)success failure:(HUCallback)failure {
     NSURLRequest *request = [[HUApiURLRequestGenerator sharedInstance] generatePOSTRequestWithParamas:params apiMethodName:apiName];
     NSNumber *requestID = [self callRequestWithRequest:request success:success failure:failure];
-    return requestID.unsignedIntegerValue;
+    return requestID.integerValue;
 }
 
 /**
@@ -67,13 +67,14 @@
 
 - (NSNumber *)callRequestWithRequest:(NSURLRequest *)request success:(HUCallback)success failure:(HUCallback)failure {
 
+    NSNumber *requestId = [self generateRequestId];
     NSURLSessionDataTask *task = [self.sessionManager dataTaskWithRequest:request
                                                         completionHandler:^(NSURLResponse * _Nonnull response,
                                                                             id  _Nullable responseObject,
                                                                             NSError * _Nullable error)
     {
-        
-        if (task.state == NSURLSessionTaskStateCanceling) {
+        NSURLSessionDataTask *storedTask = self.dispatchTable[requestId];
+        if (storedTask == nil) {
             return ;
         }
         else {
@@ -98,6 +99,19 @@
     return requestID;
 }
 
+- (NSNumber *)generateRequestId
+{
+    if (_recordedRequestId == nil) {
+        _recordedRequestId = @(1);
+    } else {
+        if ([_recordedRequestId integerValue] == NSIntegerMax) {
+            _recordedRequestId = @(1);
+        } else {
+            _recordedRequestId = @([_recordedRequestId integerValue] + 1);
+        }
+    }
+    return _recordedRequestId;
+}
 
 #pragma mark - getters and setters
 

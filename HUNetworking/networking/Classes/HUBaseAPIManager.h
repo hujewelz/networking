@@ -87,10 +87,10 @@ typedef NS_ENUM(NSInteger, HUAPIManagerErrorType) {
 
 @property (nonatomic,readonly, assign) BOOL isRechable;
 
-- (void)fetchData;
-- (void)fetchDataWithParam:(NSDictionary *)param;
+- (NSInteger)fetchData;
+- (NSInteger)fetchDataWithParam:(NSDictionary *)param;
 - (id)reformerDataWithRefomer:(id<HUDataReformer>)reformer;
-- (void)cancelRequest;
+
 - (NSDictionary *)reformParams:(NSDictionary *)params;
 
 
@@ -102,5 +102,8 @@ typedef NS_ENUM(NSInteger, HUAPIManagerErrorType) {
 - (void)afterPerformFailWithError:(NSError *)error;
 
 - (BOOL)shouldCallAPIWithParams:(NSDictionary *)params;
+
+- (void)cancelAllRequests;
+- (void)cancelRequestWithRequestId:(NSInteger)requestID;
 
 @end
