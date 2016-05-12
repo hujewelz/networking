@@ -15,7 +15,6 @@
 		04095E051CE41701008EAB5E /* HULogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095DFD1CE41701008EAB5E /* HULogger.m */; };
 		04095E061CE41701008EAB5E /* HUServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095DFF1CE41701008EAB5E /* HUServerConfig.m */; };
 		04095E0E1CE456E3008EAB5E /* HUBaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095E081CE456E3008EAB5E /* HUBaseAPIManager.m */; };
-		04095E0F1CE456E3008EAB5E /* HUNetworkingApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095E0A1CE456E3008EAB5E /* HUNetworkingApi.m */; };
 		04095E101CE456E3008EAB5E /* TestAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095E0D1CE456E3008EAB5E /* TestAPIManager.m */; };
 		04FBC3F51CE0242900B61996 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC3F41CE0242900B61996 /* main.m */; };
 		04FBC3F81CE0242900B61996 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC3F71CE0242900B61996 /* AppDelegate.m */; };
@@ -44,8 +43,6 @@
 		04095DFF1CE41701008EAB5E /* HUServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUServerConfig.m; sourceTree = "<group>"; };
 		04095E071CE456E3008EAB5E /* HUBaseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBaseAPIManager.h; sourceTree = "<group>"; };
 		04095E081CE456E3008EAB5E /* HUBaseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBaseAPIManager.m; sourceTree = "<group>"; };
-		04095E091CE456E3008EAB5E /* HUNetworkingApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUNetworkingApi.h; sourceTree = "<group>"; };
-		04095E0A1CE456E3008EAB5E /* HUNetworkingApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUNetworkingApi.m; sourceTree = "<group>"; };
 		04095E0B1CE456E3008EAB5E /* HUPropertyListReformerKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUPropertyListReformerKeys.h; sourceTree = "<group>"; };
 		04095E0C1CE456E3008EAB5E /* TestAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAPIManager.h; sourceTree = "<group>"; };
 		04095E0D1CE456E3008EAB5E /* TestAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAPIManager.m; sourceTree = "<group>"; };
@@ -112,8 +109,6 @@
 				04095E111CE456F2008EAB5E /* HUProtocol.h */,
 				04095E071CE456E3008EAB5E /* HUBaseAPIManager.h */,
 				04095E081CE456E3008EAB5E /* HUBaseAPIManager.m */,
-				04095E091CE456E3008EAB5E /* HUNetworkingApi.h */,
-				04095E0A1CE456E3008EAB5E /* HUNetworkingApi.m */,
 				04095E0B1CE456E3008EAB5E /* HUPropertyListReformerKeys.h */,
 				04095E0C1CE456E3008EAB5E /* TestAPIManager.h */,
 				04095E0D1CE456E3008EAB5E /* TestAPIManager.m */,
@@ -315,7 +310,6 @@
 				04095E0E1CE456E3008EAB5E /* HUBaseAPIManager.m in Sources */,
 				04095E021CE41701008EAB5E /* HUApiProxy.m in Sources */,
 				04095E001CE41701008EAB5E /* NSString+networking.m in Sources */,
-				04095E0F1CE456E3008EAB5E /* HUNetworkingApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
