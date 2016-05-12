@@ -7,24 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04095E001CE41701008EAB5E /* NSString+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095DF21CE41701008EAB5E /* NSString+networking.m */; };
+		04095E011CE41701008EAB5E /* UIDevice+UtilNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095DF41CE41701008EAB5E /* UIDevice+UtilNetworking.m */; };
+		04095E021CE41701008EAB5E /* HUApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095DF71CE41701008EAB5E /* HUApiProxy.m */; };
+		04095E031CE41701008EAB5E /* HUApiURLRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095DF91CE41701008EAB5E /* HUApiURLRequestGenerator.m */; };
+		04095E041CE41701008EAB5E /* HUAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095DFB1CE41701008EAB5E /* HUAppContext.m */; };
+		04095E051CE41701008EAB5E /* HULogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095DFD1CE41701008EAB5E /* HULogger.m */; };
+		04095E061CE41701008EAB5E /* HUServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095DFF1CE41701008EAB5E /* HUServerConfig.m */; };
+		04095E0E1CE456E3008EAB5E /* HUBaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095E081CE456E3008EAB5E /* HUBaseAPIManager.m */; };
+		04095E0F1CE456E3008EAB5E /* HUNetworkingApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095E0A1CE456E3008EAB5E /* HUNetworkingApi.m */; };
+		04095E101CE456E3008EAB5E /* TestAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095E0D1CE456E3008EAB5E /* TestAPIManager.m */; };
 		04FBC3F51CE0242900B61996 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC3F41CE0242900B61996 /* main.m */; };
 		04FBC3F81CE0242900B61996 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC3F71CE0242900B61996 /* AppDelegate.m */; };
 		04FBC3FB1CE0242900B61996 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC3FA1CE0242900B61996 /* ViewController.m */; };
 		04FBC3FE1CE0242900B61996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FBC3FC1CE0242900B61996 /* Main.storyboard */; };
 		04FBC4001CE0242900B61996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FBC3FF1CE0242900B61996 /* Assets.xcassets */; };
 		04FBC4031CE0242900B61996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FBC4011CE0242900B61996 /* LaunchScreen.storyboard */; };
-		04FBC40C1CE0269800B61996 /* HUApiURLRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC40B1CE0269800B61996 /* HUApiURLRequestGenerator.m */; };
-		04FBC40F1CE02BE800B61996 /* HUAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC40E1CE02BE800B61996 /* HUAppContext.m */; };
-		04FBC4131CE02F4600B61996 /* UIDevice+UtilNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC4121CE02F4600B61996 /* UIDevice+UtilNetworking.m */; };
-		04FBC4161CE035C000B61996 /* HUServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC4151CE035C000B61996 /* HUServerConfig.m */; };
-		04FBC4191CE0596E00B61996 /* NSString+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC4181CE0596E00B61996 /* NSString+networking.m */; };
-		04FBC41C1CE0678000B61996 /* HUApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC41B1CE0678000B61996 /* HUApiProxy.m */; };
-		04FBC41F1CE07B6500B61996 /* HULogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC41E1CE07B6500B61996 /* HULogger.m */; };
 		202FC9B6D8F9621EBA40ABAC /* libPods-HUNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F4F467C045E98268CC7D22 /* libPods-HUNetworking.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00ADA8F6BAB8D75CA5A4A8B4 /* Pods-HUNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUNetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-HUNetworking/Pods-HUNetworking.release.xcconfig"; sourceTree = "<group>"; };
+		04095DF11CE41701008EAB5E /* NSString+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+networking.h"; sourceTree = "<group>"; };
+		04095DF21CE41701008EAB5E /* NSString+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+networking.m"; sourceTree = "<group>"; };
+		04095DF31CE41701008EAB5E /* UIDevice+UtilNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+UtilNetworking.h"; sourceTree = "<group>"; };
+		04095DF41CE41701008EAB5E /* UIDevice+UtilNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+UtilNetworking.m"; sourceTree = "<group>"; };
+		04095DF61CE41701008EAB5E /* HUApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUApiProxy.h; sourceTree = "<group>"; };
+		04095DF71CE41701008EAB5E /* HUApiProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUApiProxy.m; sourceTree = "<group>"; };
+		04095DF81CE41701008EAB5E /* HUApiURLRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUApiURLRequestGenerator.h; sourceTree = "<group>"; };
+		04095DF91CE41701008EAB5E /* HUApiURLRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUApiURLRequestGenerator.m; sourceTree = "<group>"; };
+		04095DFA1CE41701008EAB5E /* HUAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUAppContext.h; sourceTree = "<group>"; };
+		04095DFB1CE41701008EAB5E /* HUAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUAppContext.m; sourceTree = "<group>"; };
+		04095DFC1CE41701008EAB5E /* HULogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HULogger.h; sourceTree = "<group>"; };
+		04095DFD1CE41701008EAB5E /* HULogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HULogger.m; sourceTree = "<group>"; };
+		04095DFE1CE41701008EAB5E /* HUServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUServerConfig.h; sourceTree = "<group>"; };
+		04095DFF1CE41701008EAB5E /* HUServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUServerConfig.m; sourceTree = "<group>"; };
+		04095E071CE456E3008EAB5E /* HUBaseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBaseAPIManager.h; sourceTree = "<group>"; };
+		04095E081CE456E3008EAB5E /* HUBaseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBaseAPIManager.m; sourceTree = "<group>"; };
+		04095E091CE456E3008EAB5E /* HUNetworkingApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUNetworkingApi.h; sourceTree = "<group>"; };
+		04095E0A1CE456E3008EAB5E /* HUNetworkingApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUNetworkingApi.m; sourceTree = "<group>"; };
+		04095E0B1CE456E3008EAB5E /* HUPropertyListReformerKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUPropertyListReformerKeys.h; sourceTree = "<group>"; };
+		04095E0C1CE456E3008EAB5E /* TestAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAPIManager.h; sourceTree = "<group>"; };
+		04095E0D1CE456E3008EAB5E /* TestAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAPIManager.m; sourceTree = "<group>"; };
+		04095E111CE456F2008EAB5E /* HUProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUProtocol.h; sourceTree = "<group>"; };
 		04FBC3F01CE0242900B61996 /* HUNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HUNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FBC3F41CE0242900B61996 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04FBC3F61CE0242900B61996 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,20 +60,6 @@
 		04FBC3FF1CE0242900B61996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04FBC4021CE0242900B61996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04FBC4041CE0242900B61996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04FBC40A1CE0269800B61996 /* HUApiURLRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUApiURLRequestGenerator.h; sourceTree = "<group>"; };
-		04FBC40B1CE0269800B61996 /* HUApiURLRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUApiURLRequestGenerator.m; sourceTree = "<group>"; };
-		04FBC40D1CE02BE800B61996 /* HUAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUAppContext.h; sourceTree = "<group>"; };
-		04FBC40E1CE02BE800B61996 /* HUAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUAppContext.m; sourceTree = "<group>"; };
-		04FBC4111CE02F4600B61996 /* UIDevice+UtilNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+UtilNetworking.h"; sourceTree = "<group>"; };
-		04FBC4121CE02F4600B61996 /* UIDevice+UtilNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+UtilNetworking.m"; sourceTree = "<group>"; };
-		04FBC4141CE035BF00B61996 /* HUServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUServerConfig.h; sourceTree = "<group>"; };
-		04FBC4151CE035C000B61996 /* HUServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUServerConfig.m; sourceTree = "<group>"; };
-		04FBC4171CE0596E00B61996 /* NSString+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+networking.h"; sourceTree = "<group>"; };
-		04FBC4181CE0596E00B61996 /* NSString+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+networking.m"; sourceTree = "<group>"; };
-		04FBC41A1CE0678000B61996 /* HUApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUApiProxy.h; sourceTree = "<group>"; };
-		04FBC41B1CE0678000B61996 /* HUApiProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUApiProxy.m; sourceTree = "<group>"; };
-		04FBC41D1CE07B6500B61996 /* HULogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HULogger.h; sourceTree = "<group>"; };
-		04FBC41E1CE07B6500B61996 /* HULogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HULogger.m; sourceTree = "<group>"; };
 		A757E1D40E609F71F41E418D /* Pods-HUNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HUNetworking/Pods-HUNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		D1F4F467C045E98268CC7D22 /* libPods-HUNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HUNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -65,6 +76,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04095DEF1CE41701008EAB5E /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				04095DF01CE41701008EAB5E /* Categories */,
+				04095DF51CE41701008EAB5E /* Classes */,
+			);
+			path = networking;
+			sourceTree = "<group>";
+		};
+		04095DF01CE41701008EAB5E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				04095DF11CE41701008EAB5E /* NSString+networking.h */,
+				04095DF21CE41701008EAB5E /* NSString+networking.m */,
+				04095DF31CE41701008EAB5E /* UIDevice+UtilNetworking.h */,
+				04095DF41CE41701008EAB5E /* UIDevice+UtilNetworking.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		04095DF51CE41701008EAB5E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				04095DF61CE41701008EAB5E /* HUApiProxy.h */,
+				04095DF71CE41701008EAB5E /* HUApiProxy.m */,
+				04095DF81CE41701008EAB5E /* HUApiURLRequestGenerator.h */,
+				04095DF91CE41701008EAB5E /* HUApiURLRequestGenerator.m */,
+				04095DFA1CE41701008EAB5E /* HUAppContext.h */,
+				04095DFB1CE41701008EAB5E /* HUAppContext.m */,
+				04095DFC1CE41701008EAB5E /* HULogger.h */,
+				04095DFD1CE41701008EAB5E /* HULogger.m */,
+				04095DFE1CE41701008EAB5E /* HUServerConfig.h */,
+				04095DFF1CE41701008EAB5E /* HUServerConfig.m */,
+				04095E111CE456F2008EAB5E /* HUProtocol.h */,
+				04095E071CE456E3008EAB5E /* HUBaseAPIManager.h */,
+				04095E081CE456E3008EAB5E /* HUBaseAPIManager.m */,
+				04095E091CE456E3008EAB5E /* HUNetworkingApi.h */,
+				04095E0A1CE456E3008EAB5E /* HUNetworkingApi.m */,
+				04095E0B1CE456E3008EAB5E /* HUPropertyListReformerKeys.h */,
+				04095E0C1CE456E3008EAB5E /* TestAPIManager.h */,
+				04095E0D1CE456E3008EAB5E /* TestAPIManager.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		04FBC3E71CE0242900B61996 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +142,7 @@
 		04FBC3F21CE0242900B61996 /* HUNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				04FBC4101CE02F1000B61996 /* Categories */,
+				04095DEF1CE41701008EAB5E /* networking */,
 				04FBC3F61CE0242900B61996 /* AppDelegate.h */,
 				04FBC3F71CE0242900B61996 /* AppDelegate.m */,
 				04FBC3F91CE0242900B61996 /* ViewController.h */,
@@ -104,29 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				04FBC3F41CE0242900B61996 /* main.m */,
-				04FBC40A1CE0269800B61996 /* HUApiURLRequestGenerator.h */,
-				04FBC40B1CE0269800B61996 /* HUApiURLRequestGenerator.m */,
-				04FBC40D1CE02BE800B61996 /* HUAppContext.h */,
-				04FBC40E1CE02BE800B61996 /* HUAppContext.m */,
-				04FBC4141CE035BF00B61996 /* HUServerConfig.h */,
-				04FBC4151CE035C000B61996 /* HUServerConfig.m */,
-				04FBC41A1CE0678000B61996 /* HUApiProxy.h */,
-				04FBC41B1CE0678000B61996 /* HUApiProxy.m */,
-				04FBC41D1CE07B6500B61996 /* HULogger.h */,
-				04FBC41E1CE07B6500B61996 /* HULogger.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		04FBC4101CE02F1000B61996 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				04FBC4111CE02F4600B61996 /* UIDevice+UtilNetworking.h */,
-				04FBC4121CE02F4600B61996 /* UIDevice+UtilNetworking.m */,
-				04FBC4171CE0596E00B61996 /* NSString+networking.h */,
-				04FBC4181CE0596E00B61996 /* NSString+networking.m */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		92A1F7C168995ED02E0C3DA6 /* Pods */ = {
@@ -268,16 +303,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04FBC41C1CE0678000B61996 /* HUApiProxy.m in Sources */,
 				04FBC3FB1CE0242900B61996 /* ViewController.m in Sources */,
-				04FBC40F1CE02BE800B61996 /* HUAppContext.m in Sources */,
-				04FBC4161CE035C000B61996 /* HUServerConfig.m in Sources */,
-				04FBC41F1CE07B6500B61996 /* HULogger.m in Sources */,
-				04FBC4191CE0596E00B61996 /* NSString+networking.m in Sources */,
+				04095E051CE41701008EAB5E /* HULogger.m in Sources */,
 				04FBC3F81CE0242900B61996 /* AppDelegate.m in Sources */,
+				04095E101CE456E3008EAB5E /* TestAPIManager.m in Sources */,
+				04095E031CE41701008EAB5E /* HUApiURLRequestGenerator.m in Sources */,
 				04FBC3F51CE0242900B61996 /* main.m in Sources */,
-				04FBC40C1CE0269800B61996 /* HUApiURLRequestGenerator.m in Sources */,
-				04FBC4131CE02F4600B61996 /* UIDevice+UtilNetworking.m in Sources */,
+				04095E061CE41701008EAB5E /* HUServerConfig.m in Sources */,
+				04095E041CE41701008EAB5E /* HUAppContext.m in Sources */,
+				04095E011CE41701008EAB5E /* UIDevice+UtilNetworking.m in Sources */,
+				04095E0E1CE456E3008EAB5E /* HUBaseAPIManager.m in Sources */,
+				04095E021CE41701008EAB5E /* HUApiProxy.m in Sources */,
+				04095E001CE41701008EAB5E /* NSString+networking.m in Sources */,
+				04095E0F1CE456E3008EAB5E /* HUNetworkingApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

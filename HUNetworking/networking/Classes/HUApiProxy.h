@@ -22,6 +22,9 @@ typedef void(^HUCallback)(id responseObj, NSError *error);
                          success:(HUCallback)success
                          failure:(HUCallback)failure;
 
+- (void)cancelRequestWithRequestID:(NSNumber *)requestID;
+- (void)cancelRequestWithRequestIDList:(NSArray<NSNumber *> *)requestIDList;
+
 + (instancetype)sharedInstance;
 
 @end

@@ -19,7 +19,7 @@
     NSMutableString *logString = [NSMutableString stringWithString:@"\n\n**************************************************************\n*                       Request Start                        *\n**************************************************************\n\n"];
     HUServerConfig *server = [HUServerConfig sharedInstance];
     [logString appendFormat:@"API Name:\t\t%@\n",apiName];
-    [logString appendFormat:@"Method:\t\t\t%@\n",method];
+    [logString appendFormat:@"Method:\t\t%@\n",method];
     [logString appendFormat:@"Server Environment:\t%zd\n",server.environmentType];
     [logString appendFormat:@"Params:\t\t%@\n",params];
     
@@ -48,8 +48,6 @@
         [logString appendFormat:@"Error Localized Failure Reason:\t\t\t%@\n", error.localizedFailureReason];
         [logString appendFormat:@"Error Localized Recovery Suggestion:\t%@\n\n", error.localizedRecoverySuggestion];
     }
-    
-    [logString appendString:@"\n---------------  Related Request Content  --------------\n"];
     
     [logString appendFormat:@"\n\n==============================================================\n=                        Response End                        =\n==============================================================\n\n\n\n"];
     

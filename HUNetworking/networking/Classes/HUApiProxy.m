@@ -9,6 +9,7 @@
 #import "HUApiProxy.h"
 #import "AFURLSessionManager.h"
 #import "HUApiURLRequestGenerator.h"
+#import "AFURLResponseSerialization.h"
 #import "HULogger.h"
 
 @interface HUApiProxy ()
@@ -48,12 +49,12 @@
 /**
  *  取消网络请求
  */
-- (void)cancelRequestWithRequestID:(NSNumber *)requestID{
+- (void)cancelRequestWithRequestID:(NSNumber *)requestID {
     NSURLSessionDataTask *task = [self.dispatchTable objectForKey:requestID];
     [task cancel];
     [self.dispatchTable removeObjectForKey:requestID];
 }
-- (void)cancelRequestWithRequestIDList:(NSArray<NSNumber *> *)requestIDList{
+- (void)cancelRequestWithRequestIDList:(NSArray<NSNumber *> *)requestIDList {
     typeof(self) __weak weakSelf = self;
     [requestIDList enumerateObjectsUsingBlock:^(NSNumber * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSURLSessionDataTask *task = [weakSelf.dispatchTable objectForKey:obj];
@@ -80,10 +81,10 @@
             [self.dispatchTable removeObjectForKey:requestID];
         }
         NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         if (!error) {
             [HULogger logDebugInfoWithResponse:(NSHTTPURLResponse*)response resposeString:responseString error:nil];
-            success?success(responseObject, nil):nil;
+            success?success(json, nil):nil;
         }
         else {
             [HULogger logDebugInfoWithResponse:(NSHTTPURLResponse*)response resposeString:responseString error:error];
@@ -111,9 +112,8 @@
     if (_sessionManager == nil) {
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         configuration.timeoutIntervalForResource = 20;
-        
         _sessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
-        _sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+        _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     }
     return _sessionManager;
 }

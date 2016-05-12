@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HUApiProxy.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [[HUApiProxy sharedInstance] callPOSTWithParams:@{@"type":@0} apiName:@"main/isVersion" success:^(id responseObj, NSError *error) {
+        NSLog(@"responseObj: %@", responseObj);
+    } failure:^(id responseObj, NSError *error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

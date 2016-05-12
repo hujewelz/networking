@@ -43,6 +43,8 @@ static NSTimeInterval kHUNetworkingTimeoutSeconds = 20.0f;
 
 - (NSURLRequest *)generateWithRequestMethod:(NSString *)method paramas:(NSDictionary *)params apiMethodName:(NSString *)methodName {
     NSString *urlString = [self URLStringWithServiceUrl:[HUServerConfig sharedInstance].apiBaseUrl path:methodName];
+    
+    
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:method URLString:urlString parameters:params error:nil];
     request.timeoutInterval = kHUNetworkingTimeoutSeconds;
     [HULogger logDebugInfoWithRequest:request apiName:urlString requestParams:params httpMethod:method];
@@ -50,6 +52,7 @@ static NSTimeInterval kHUNetworkingTimeoutSeconds = 20.0f;
 }
 
 - (NSString *)URLStringWithServiceUrl:(NSString *)serviceUrl path:(NSString *)path{
+    
     NSURL *fullURL = [NSURL URLWithString:serviceUrl];
     if (![path isEmptyString]) {
         fullURL = [NSURL URLWithString:path relativeToURL:fullURL];
@@ -61,6 +64,7 @@ static NSTimeInterval kHUNetworkingTimeoutSeconds = 20.0f;
               \n---------------------------\n",serviceUrl,path);
         return nil;
     }
+    
     return [fullURL absoluteString];
 }
 
