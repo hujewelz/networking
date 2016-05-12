@@ -78,8 +78,7 @@
             return ;
         }
         else {
-            NSNumber *requestID = [NSNumber numberWithUnsignedInteger:task.hash];
-            [self.dispatchTable removeObjectForKey:requestID];
+            [self.dispatchTable removeObjectForKey:requestId];
         }
         NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
@@ -93,10 +92,10 @@
         }
         
     }];
-    NSNumber *requestID = [NSNumber numberWithUnsignedInteger:task.hash];
-    self.dispatchTable[requestID] = task;
+    
+    self.dispatchTable[requestId] = task;
     [task resume];
-    return requestID;
+    return requestId;
 }
 
 - (NSNumber *)generateRequestId

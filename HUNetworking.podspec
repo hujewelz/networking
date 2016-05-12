@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HUNetworking"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "a networking framework from ios"
 
   # This description is used to generate tags and improve search results.
@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
   # s.platform     = :ios
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "https://github.com/hujewelz/networking.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/hujewelz/networking.git", :tag => "0.0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

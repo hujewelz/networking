@@ -35,9 +35,9 @@
 //        NSAssert(NO, @"");
 //    }
     self.environmentType = environmentType;
-    NSDictionary *configDict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:plist ofType:@"plist"]];
+   // NSDictionary *configDict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:plist ofType:@"plist"]];
     _apiBaseUrl = @"http://mysql.memeta.cc:8009/";
-   // http://mysql.memeta.cc:8009/
+ 
 }
 
 @end
