@@ -5,7 +5,7 @@ platform :ios, '7.0'
 
 target 'HUNetworking' do
 
-pod ‘AFNetworking’
+pod ‘AFNetworking’, :path => './'
 
 end
 

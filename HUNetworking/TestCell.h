@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TestCell.h
 //  ProtocolOrientedProgramming
 //
 //  Created by mac on 16/4/7.
@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HUProtocol.h"
 
-@interface ViewController : UIViewController
+
+@interface TestCell : UITableViewCell <HUConfigureable>
+
 
 
 @end
-

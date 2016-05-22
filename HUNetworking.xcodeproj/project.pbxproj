@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04095AFC1CE58391007B527C /* TestAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095AF41CE58391007B527C /* TestAPIManager.m */; };
+		04095AFD1CE58391007B527C /* TestReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095AF61CE58391007B527C /* TestReformer.m */; };
+		04095AFE1CE58391007B527C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095AF71CE58391007B527C /* ViewController.m */; };
+		04095AFF1CE58391007B527C /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095AFA1CE58391007B527C /* TestCell.m */; };
 		04095E001CE41701008EAB5E /* NSString+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095DF21CE41701008EAB5E /* NSString+networking.m */; };
 		04095E011CE41701008EAB5E /* UIDevice+UtilNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095DF41CE41701008EAB5E /* UIDevice+UtilNetworking.m */; };
 		04095E021CE41701008EAB5E /* HUApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095DF71CE41701008EAB5E /* HUApiProxy.m */; };
@@ -17,7 +21,6 @@
 		04095E0E1CE456E3008EAB5E /* HUBaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04095E081CE456E3008EAB5E /* HUBaseAPIManager.m */; };
 		04FBC3F51CE0242900B61996 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC3F41CE0242900B61996 /* main.m */; };
 		04FBC3F81CE0242900B61996 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC3F71CE0242900B61996 /* AppDelegate.m */; };
-		04FBC3FB1CE0242900B61996 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBC3FA1CE0242900B61996 /* ViewController.m */; };
 		04FBC3FE1CE0242900B61996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FBC3FC1CE0242900B61996 /* Main.storyboard */; };
 		04FBC4001CE0242900B61996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FBC3FF1CE0242900B61996 /* Assets.xcassets */; };
 		04FBC4031CE0242900B61996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FBC4011CE0242900B61996 /* LaunchScreen.storyboard */; };
@@ -26,6 +29,15 @@
 
 /* Begin PBXFileReference section */
 		00ADA8F6BAB8D75CA5A4A8B4 /* Pods-HUNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUNetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-HUNetworking/Pods-HUNetworking.release.xcconfig"; sourceTree = "<group>"; };
+		04095AF31CE58391007B527C /* HUPropertyListReformerKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUPropertyListReformerKeys.h; sourceTree = "<group>"; };
+		04095AF41CE58391007B527C /* TestAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAPIManager.m; sourceTree = "<group>"; };
+		04095AF51CE58391007B527C /* TestReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestReformer.h; sourceTree = "<group>"; };
+		04095AF61CE58391007B527C /* TestReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestReformer.m; sourceTree = "<group>"; };
+		04095AF71CE58391007B527C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04095AF81CE58391007B527C /* TestAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAPIManager.h; sourceTree = "<group>"; };
+		04095AF91CE58391007B527C /* TestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
+		04095AFA1CE58391007B527C /* TestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCell.m; sourceTree = "<group>"; };
+		04095AFB1CE58391007B527C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		04095DF11CE41701008EAB5E /* NSString+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+networking.h"; sourceTree = "<group>"; };
 		04095DF21CE41701008EAB5E /* NSString+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+networking.m"; sourceTree = "<group>"; };
 		04095DF31CE41701008EAB5E /* UIDevice+UtilNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+UtilNetworking.h"; sourceTree = "<group>"; };
@@ -42,14 +54,11 @@
 		04095DFF1CE41701008EAB5E /* HUServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUServerConfig.m; sourceTree = "<group>"; };
 		04095E071CE456E3008EAB5E /* HUBaseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBaseAPIManager.h; sourceTree = "<group>"; };
 		04095E081CE456E3008EAB5E /* HUBaseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBaseAPIManager.m; sourceTree = "<group>"; };
-		04095E0B1CE456E3008EAB5E /* HUPropertyListReformerKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUPropertyListReformerKeys.h; sourceTree = "<group>"; };
 		04095E111CE456F2008EAB5E /* HUProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUProtocol.h; sourceTree = "<group>"; };
 		04FBC3F01CE0242900B61996 /* HUNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HUNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FBC3F41CE0242900B61996 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04FBC3F61CE0242900B61996 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04FBC3F71CE0242900B61996 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04FBC3F91CE0242900B61996 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04FBC3FA1CE0242900B61996 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		04FBC3FD1CE0242900B61996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04FBC3FF1CE0242900B61996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04FBC4021CE0242900B61996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,7 +115,6 @@
 				04095E111CE456F2008EAB5E /* HUProtocol.h */,
 				04095E071CE456E3008EAB5E /* HUBaseAPIManager.h */,
 				04095E081CE456E3008EAB5E /* HUBaseAPIManager.m */,
-				04095E0B1CE456E3008EAB5E /* HUPropertyListReformerKeys.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -135,8 +143,15 @@
 				04095DEF1CE41701008EAB5E /* networking */,
 				04FBC3F61CE0242900B61996 /* AppDelegate.h */,
 				04FBC3F71CE0242900B61996 /* AppDelegate.m */,
-				04FBC3F91CE0242900B61996 /* ViewController.h */,
-				04FBC3FA1CE0242900B61996 /* ViewController.m */,
+				04095AFB1CE58391007B527C /* ViewController.h */,
+				04095AF71CE58391007B527C /* ViewController.m */,
+				04095AF41CE58391007B527C /* TestAPIManager.m */,
+				04095AF81CE58391007B527C /* TestAPIManager.h */,
+				04095AF51CE58391007B527C /* TestReformer.h */,
+				04095AF61CE58391007B527C /* TestReformer.m */,
+				04095AF91CE58391007B527C /* TestCell.h */,
+				04095AFA1CE58391007B527C /* TestCell.m */,
+				04095AF31CE58391007B527C /* HUPropertyListReformerKeys.h */,
 				04FBC3FC1CE0242900B61996 /* Main.storyboard */,
 				04FBC3FF1CE0242900B61996 /* Assets.xcassets */,
 				04FBC4011CE0242900B61996 /* LaunchScreen.storyboard */,
@@ -293,16 +308,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04FBC3FB1CE0242900B61996 /* ViewController.m in Sources */,
 				04095E051CE41701008EAB5E /* HULogger.m in Sources */,
 				04FBC3F81CE0242900B61996 /* AppDelegate.m in Sources */,
 				04095E031CE41701008EAB5E /* HUApiURLRequestGenerator.m in Sources */,
 				04FBC3F51CE0242900B61996 /* main.m in Sources */,
 				04095E061CE41701008EAB5E /* HUServerConfig.m in Sources */,
 				04095E041CE41701008EAB5E /* HUAppContext.m in Sources */,
+				04095AFE1CE58391007B527C /* ViewController.m in Sources */,
 				04095E011CE41701008EAB5E /* UIDevice+UtilNetworking.m in Sources */,
+				04095AFD1CE58391007B527C /* TestReformer.m in Sources */,
+				04095AFF1CE58391007B527C /* TestCell.m in Sources */,
 				04095E0E1CE456E3008EAB5E /* HUBaseAPIManager.m in Sources */,
 				04095E021CE41701008EAB5E /* HUApiProxy.m in Sources */,
+				04095AFC1CE58391007B527C /* TestAPIManager.m in Sources */,
 				04095E001CE41701008EAB5E /* NSString+networking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
