@@ -7,6 +7,7 @@
 //
 
 #import "HuViewController.h"
+#import "HUNetworking.h"
 
 @interface HuViewController ()
 

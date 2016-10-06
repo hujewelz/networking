@@ -1,0 +1,6 @@
+framework module HUNetworking {
+  umbrella header "HUNetworking-umbrella.h"
+
+  export *
+  module * { export * }
+}

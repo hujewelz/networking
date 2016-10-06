@@ -1,0 +1,16 @@
+PODS:
+  - HUNetworking (0.1.0)
+
+DEPENDENCIES:
+  - HUNetworking (from `../`)
+
+EXTERNAL SOURCES:
+  HUNetworking:
+    :path: ../
+
+SPEC CHECKSUMS:
+  HUNetworking: 3521e8b4864efec3b28390843213989b07d7ebca
+
+PODFILE CHECKSUM: 255737463dcf24f32f5f5e753d4df0c5a7f5a6b6
+
+COCOAPODS: 1.0.1
