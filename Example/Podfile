@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HUNetworking_Example' do
+  pod 'HUNetworking', :path => '../'
+
+  target 'HUNetworking_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
