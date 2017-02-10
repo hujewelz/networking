@@ -7,7 +7,12 @@
 //
 
 @import UIKit;
+#import "HUProtocol.h"
 
 @interface HuViewController : UIViewController
+
+@end
+
+@interface UserDataReformer : NSObject <HUDataReformer>
 
 @end

@@ -86,7 +86,7 @@
         _os_version = [[UIDevice currentDevice] systemVersion];
         _bundle_version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
         _app_client_id = @"1";
-        _device_model = [[UIDevice currentDevice] platform];
+        //_device_model = [[UIDevice currentDevice] platform];
         _device_name = [[UIDevice currentDevice] name];
         
     }

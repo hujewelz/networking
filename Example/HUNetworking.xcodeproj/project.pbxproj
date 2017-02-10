@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A9BA7B1E4DA0590093BC67 /* HUUserAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9BA7A1E4DA0590093BC67 /* HUUserAPI.m */; };
+		04A9BA7E1E4DA5C30093BC67 /* HUUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9BA7D1E4DA5C30093BC67 /* HUUser.m */; };
 		4AB1B51618D68459DD6D5593 /* Pods_HUNetworking_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC1E783659E8543B0CA5201 /* Pods_HUNetworking_Example.framework */; };
 		5F0C2840220E4B933CB9BB82 /* Pods_HUNetworking_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014F94F9F9635460545499D4 /* Pods_HUNetworking_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -39,6 +41,10 @@
 		014F94F9F9635460545499D4 /* Pods_HUNetworking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HUNetworking_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		024003A9E86D8FB7D82E6E94 /* Pods-HUNetworking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUNetworking_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HUNetworking_Tests/Pods-HUNetworking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		02A9F12525F25936CDB4A932 /* HUNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HUNetworking.podspec; path = ../HUNetworking.podspec; sourceTree = "<group>"; };
+		04A9BA791E4DA0590093BC67 /* HUUserAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUUserAPI.h; sourceTree = "<group>"; };
+		04A9BA7A1E4DA0590093BC67 /* HUUserAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUUserAPI.m; sourceTree = "<group>"; };
+		04A9BA7C1E4DA5C30093BC67 /* HUUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUUser.h; sourceTree = "<group>"; };
+		04A9BA7D1E4DA5C30093BC67 /* HUUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUUser.m; sourceTree = "<group>"; };
 		0BC1E783659E8543B0CA5201 /* Pods_HUNetworking_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HUNetworking_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		376482A8E9CE554AE67D8093 /* Pods-HUNetworking_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUNetworking_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HUNetworking_Example/Pods-HUNetworking_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4D8F45B70D845F120DF05217 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -137,6 +143,10 @@
 				6003F5A6195388D20070C39A /* HuViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				04A9BA791E4DA0590093BC67 /* HUUserAPI.h */,
+				04A9BA7A1E4DA0590093BC67 /* HUUserAPI.m */,
+				04A9BA7C1E4DA5C30093BC67 /* HUUser.h */,
+				04A9BA7D1E4DA5C30093BC67 /* HUUser.m */,
 			);
 			name = "Example for HUNetworking";
 			path = HUNetworking;
@@ -243,7 +253,7 @@
 		6003F582195388D10070C39A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = Hu;
+				CLASSPREFIX = HU;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Jewelz Hu";
 				TargetAttributes = {
@@ -390,9 +400,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A9BA7B1E4DA0590093BC67 /* HUUserAPI.m in Sources */,
 				6003F59E195388D20070C39A /* HuAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* HuViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				04A9BA7E1E4DA5C30093BC67 /* HUUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,7 +528,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HUNetworking/HUNetworking-Prefix.pch";
 				INFOPLIST_FILE = "HUNetworking/HUNetworking-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"HUNetworking\"",
+					"-Objc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -532,7 +551,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HUNetworking/HUNetworking-Prefix.pch";
 				INFOPLIST_FILE = "HUNetworking/HUNetworking-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"HUNetworking\"",
+					"-Objc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

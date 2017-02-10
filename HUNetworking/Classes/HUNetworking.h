@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "HUApiProxy.h"
+#import "HUBaseAPIManager.h"
 
 static NSInteger requestID = 0;
 

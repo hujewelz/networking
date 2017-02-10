@@ -201,5 +201,35 @@
     return _sessionManager;
 }
 
+#pragma mark - private
+
+/**
+ *  功能 获取文件类型
+ *  @param path 文件路径
+ *  @return MIMEType
+ */
+- (NSString*)getMIMEType:(NSString *)path {
+  NSString *subfix = [path lastPathComponent];
+  NSString *mimeType = [[subfix componentsSeparatedByString:@"."] lastObject];
+  if ([mimeType isEqualToString:@"MOV"]) {
+    return @"video/quicktime";
+  }
+  else {
+    return @"image/jpeg";
+  }
+  
+  //    NSError *error;
+  //    NSURLResponse *response;
+  //    NSURL *url = [NSURL fileURLWithPath:path];
+  //    if (url == nil) {
+  //        return nil;
+  //    }
+  //    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+  //    [NSURLConnection sendSynchronousRequest:request
+  //                          returningResponse:&response
+  //                                      error:&error];
+  //    return [response MIMEType];
+}
+
 
 @end

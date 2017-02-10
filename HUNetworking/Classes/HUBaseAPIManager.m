@@ -54,6 +54,11 @@ static NSString * const kAPIManagerErrorDomain = @"APIManagerErrorDomain";
     return requestId;
 }
 
+/*!
+ 发起请求
+ @param param 请求参数
+ @return NSInteger 请求ID
+ */
 - (NSInteger)fetchDataWithParam:(NSDictionary *)param {
     NSInteger requestId = 0;
     NSDictionary *apiparam = [self reformParams:param];
@@ -230,9 +235,5 @@ static NSString * const kAPIManagerErrorDomain = @"APIManagerErrorDomain";
     return userinfo;
 }
 
-//- (void)test {
-//    [[NSNotificationCenter defaultCenter] postNotificationName:@"" object:nil userInfo:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(a) name:@"" object:nil];
-//}
 
 @end

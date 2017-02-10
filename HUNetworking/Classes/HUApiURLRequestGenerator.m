@@ -56,9 +56,10 @@ static NSTimeInterval kHUNetworkingTimeoutSeconds = 15.0f;
     @return NSString 完整请求URL字符串
  */
 - (NSString *)URLStringWithServiceUrl:(NSString *)serviceUrl path:(NSString *)path{
-    
+  
+
     NSURL *fullURL = [NSURL URLWithString:serviceUrl];
-    if (![path isEmptyString]) {
+    if (path != nil && [path isKindOfClass:[NSString class]]) {
         fullURL = [NSURL URLWithString:path relativeToURL:fullURL];
     }
     if (fullURL == nil) {

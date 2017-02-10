@@ -93,13 +93,6 @@ typedef NS_ENUM(NSInteger, HUAPIManagerErrorType) {
 /*! 发起请求 */
 - (NSInteger)fetchData;
 
-/*! 
- 发起请求 
- @param param 请求参数
- @return NSInteger 请求ID
- */
-- (NSInteger)fetchDataWithParam:(NSDictionary *)param;
-
 /*!
  使用改方法格式化成你想要的任何数据
  @param reformer 遵守 HUDataReformer协议的任何对象
@@ -109,7 +102,7 @@ typedef NS_ENUM(NSInteger, HUAPIManagerErrorType) {
 
 /*! 
  如果需要在调用API之前额外添加一些参数，比如pageNumber和pageSize之类的就在这里添加
- @remark 子类中覆盖这个函数的时候就不需要调用 @c[super reformParams:params]
+ @remark 子类中覆盖这个函数的时候就不需要调用 [super reformParams:params]
  */
 - (NSDictionary *)reformParams:(NSDictionary *)params;
 
