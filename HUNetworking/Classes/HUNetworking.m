@@ -36,14 +36,15 @@
                                             failure:failure];
 }
 
-+ (void)uploadData:(NSData *)data
++ (void)uploadData:(id)data
         withParams:(NSDictionary *)params
          URLString:(NSString *)URLString
-          fileName:(NSString *)fileName
+          filePath:(id)filePath
            success:(HUCallback)success
            failure:(HUCallback)failure {
-    [[HUApiProxy sharedInstance] uploadData:data withParams:params URLString:URLString fileName:fileName success:success failure:failure];
+  [[HUApiProxy sharedInstance] uploadData:data withParams:params URLString:URLString filePath:filePath success:success failure:failure];
 }
+
 
 + (void)cancel {
     [[HUApiProxy sharedInstance] cancelRequestWithRequestID:@(requestID)];

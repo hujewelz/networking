@@ -38,19 +38,17 @@ static NSInteger requestID = 0;
     success:(HUCallback)success
     failure:(HUCallback)failure;
 
-
 /**
- 上传单张图片
- @param data 图片数据
+ 媒体上传
+ @param data 媒体数据，单个文件必须为NSData类型，多个文件为NSData数组类型
  @param params 参数
- @param URLString 图片上传地址
- @param fileName 文件名
-*/
-
-+ (void)uploadData:(NSData *)data
+ @param URLString 上传地址
+ @param filePath 文件路径，单个文件为NSString类型
+ */
++ (void)uploadData:(id)data
         withParams:(NSDictionary *)params
          URLString:(NSString *)URLString
-          fileName:(NSString *)fileName
+          filePath:(id)filePath
            success:(HUCallback)success
            failure:(HUCallback)failure;
 

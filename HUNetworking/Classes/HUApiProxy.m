@@ -117,33 +117,68 @@
 
 #pragma mark - upload task 
 
-
-- (void)uploadData:(NSData *)data
+- (void)uploadData:(id)data
         withParams:(NSDictionary *)params
          URLString:(NSString *)URLString
-          fileName:(NSString *)fileName
+          filePath:(id)filePath
            success:(HUCallback)success
            failure:(HUCallback)failure {
-    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:URLString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:data name:@"file" fileName:fileName mimeType:@"image/jpeg"];
-    } error:nil];
-    
-    NSURLSessionUploadTask *uploadTask = [self.sessionManager uploadTaskWithStreamedRequest:request progress:^(NSProgress * _Nonnull uploadProgress) {
+  NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:URLString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    if ([data isKindOfClass:[NSData class]]) {
+      NSDate *date = [NSDate date];
+      NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+      [formatter setDateFormat:[NSString stringWithFormat:@"yyMMddHHmmss"]];
+      
+      NSString *subfix = [filePath lastPathComponent];
+      NSString *mimeType = [self getMIMEType:filePath];
+      NSString *filename = [NSString stringWithFormat:@"%@%@", [formatter stringFromDate:date],subfix];
+      
+      [formData appendPartWithFileData:data name:@"file" fileName:filename mimeType:mimeType];
+    }
+    else if ([data isKindOfClass:[NSArray class]] &&
+             [filePath isKindOfClass:[NSArray class]]){
+      NSArray *dataArray = data;
+      NSArray *filePathArray = filePath;
+      [dataArray enumerateObjectsUsingBlock:^(NSData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
-    } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-         NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        if (error == nil) {
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
-            [HULogger logDebugInfoWithResponse:(NSHTTPURLResponse*)response resposeString:responseString error:nil];
-            success?success(json, nil):nil;
-        }else {
-            [HULogger logDebugInfoWithResponse:(NSHTTPURLResponse*)response resposeString:responseString error:error];
-            failure?failure(nil, error):nil;
-        }
-        NSLog(@"error: %@", error);
-    }];
+        NSDate *date = [NSDate date];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:[NSString stringWithFormat:@"yyMMddHHmmss"]];
+        
+        NSString *path = filePathArray[idx];
+        NSString *subfix = [path lastPathComponent];
+        NSString *mimeType = [self getMIMEType:path];
+        NSString *filename = [NSString stringWithFormat:@"%@%@", [formatter stringFromDate:date],subfix];
+        
+        [formData appendPartWithFileData:obj name:@"file" fileName:filename mimeType:mimeType];
+        
+      }];
+      
+    }
     
-    [uploadTask resume];
+  } error:nil];
+  
+  NSURLSessionUploadTask *uploadTask = [self.sessionManager uploadTaskWithStreamedRequest:request progress:^(NSProgress * _Nonnull uploadProgress) {
+    
+  } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+    NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+    if (error == nil) {
+      NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+      [HULogger logDebugInfoWithResponse:(NSHTTPURLResponse*)response resposeString:responseString error:nil];
+      dispatch_async(dispatch_get_main_queue(), ^{
+        success?success(json, nil):nil;
+      });
+      
+    }else {
+      [HULogger logDebugInfoWithResponse:(NSHTTPURLResponse*)response resposeString:responseString error:error];
+      dispatch_async(dispatch_get_main_queue(), ^{
+        failure?failure(nil, error):nil;
+      });
+    }
+//    NSLog(@"error: %@", error);
+  }];
+  
+  [uploadTask resume];
 }
 
 #pragma mark - getters and setters
